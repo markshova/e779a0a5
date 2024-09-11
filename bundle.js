@@ -22943,19 +22943,12 @@ const urlParams = new URLSearchParams(queryString);
 const token = urlParams.get('token');
 console.log({ token })
 
-// const socket = io("http://localhost:3000/media-server", {
-//   query: {
-//     token: token
-//   }
-// });
-
-const socket = io("https://ms.cloudclinic.ng/media-server", {
+const socket = io("http://localhost:3000/media-server", {
   query: {
     token: token
   }
 });
 
-// const socket = io("http://ms.cloudclinic.ng/media-server")
 
 socket.on('connection-success', ({ socketId }) => {
   console.log(socketId)
